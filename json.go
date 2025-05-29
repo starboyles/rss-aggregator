@@ -8,7 +8,7 @@ import (
 
 func respondWithError(w http.ResponseWriter, code int, msg string) {
 	if code > 499 {
-		log.Println("Responding with 5XX error", msg)
+		log.Println("Responding with 5XX error:", msg)
 	}
 	type errResponse struct {
 		Error string `json:"error"`
